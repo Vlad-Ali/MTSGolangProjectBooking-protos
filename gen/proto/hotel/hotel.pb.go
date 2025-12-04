@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.10
 // 	protoc        v6.33.1
-// source: proto/hotel.proto
+// source: proto/hotel/hotel.proto
 
 package hotel
 
@@ -31,7 +31,7 @@ type RoomInfoRequest struct {
 
 func (x *RoomInfoRequest) Reset() {
 	*x = RoomInfoRequest{}
-	mi := &file_proto_hotel_proto_msgTypes[0]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *RoomInfoRequest) String() string {
 func (*RoomInfoRequest) ProtoMessage() {}
 
 func (x *RoomInfoRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hotel_proto_msgTypes[0]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *RoomInfoRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RoomInfoRequest.ProtoReflect.Descriptor instead.
 func (*RoomInfoRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hotel_proto_rawDescGZIP(), []int{0}
+	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *RoomInfoRequest) GetHotelName() string {
@@ -83,7 +83,7 @@ type RoomInfoResponse struct {
 
 func (x *RoomInfoResponse) Reset() {
 	*x = RoomInfoResponse{}
-	mi := &file_proto_hotel_proto_msgTypes[1]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -95,7 +95,7 @@ func (x *RoomInfoResponse) String() string {
 func (*RoomInfoResponse) ProtoMessage() {}
 
 func (x *RoomInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hotel_proto_msgTypes[1]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -108,7 +108,7 @@ func (x *RoomInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RoomInfoResponse.ProtoReflect.Descriptor instead.
 func (*RoomInfoResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hotel_proto_rawDescGZIP(), []int{1}
+	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RoomInfoResponse) GetAmount() int64 {
@@ -135,7 +135,7 @@ type IsHotelierRequest struct {
 
 func (x *IsHotelierRequest) Reset() {
 	*x = IsHotelierRequest{}
-	mi := &file_proto_hotel_proto_msgTypes[2]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -147,7 +147,7 @@ func (x *IsHotelierRequest) String() string {
 func (*IsHotelierRequest) ProtoMessage() {}
 
 func (x *IsHotelierRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hotel_proto_msgTypes[2]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,7 +160,7 @@ func (x *IsHotelierRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IsHotelierRequest.ProtoReflect.Descriptor instead.
 func (*IsHotelierRequest) Descriptor() ([]byte, []int) {
-	return file_proto_hotel_proto_rawDescGZIP(), []int{2}
+	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *IsHotelierRequest) GetHotelName() string {
@@ -186,7 +186,7 @@ type IsHotelierResponse struct {
 
 func (x *IsHotelierResponse) Reset() {
 	*x = IsHotelierResponse{}
-	mi := &file_proto_hotel_proto_msgTypes[3]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -198,7 +198,7 @@ func (x *IsHotelierResponse) String() string {
 func (*IsHotelierResponse) ProtoMessage() {}
 
 func (x *IsHotelierResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_hotel_proto_msgTypes[3]
+	mi := &file_proto_hotel_hotel_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -211,7 +211,7 @@ func (x *IsHotelierResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IsHotelierResponse.ProtoReflect.Descriptor instead.
 func (*IsHotelierResponse) Descriptor() ([]byte, []int) {
-	return file_proto_hotel_proto_rawDescGZIP(), []int{3}
+	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *IsHotelierResponse) GetIsHotelier() bool {
@@ -221,11 +221,11 @@ func (x *IsHotelierResponse) GetIsHotelier() bool {
 	return false
 }
 
-var File_proto_hotel_proto protoreflect.FileDescriptor
+var File_proto_hotel_hotel_proto protoreflect.FileDescriptor
 
-const file_proto_hotel_proto_rawDesc = "" +
+const file_proto_hotel_hotel_proto_rawDesc = "" +
 	"\n" +
-	"\x11proto/hotel.proto\x12\x05hotel\"O\n" +
+	"\x17proto/hotel/hotel.proto\x12\x05hotel\"O\n" +
 	"\x0fRoomInfoRequest\x12\x1c\n" +
 	"\thotelName\x18\x01 \x01(\tR\thotelName\x12\x1e\n" +
 	"\n" +
@@ -244,28 +244,28 @@ const file_proto_hotel_proto_rawDesc = "" +
 	"\x05Hotel\x12A\n" +
 	"\n" +
 	"IsHotelier\x12\x18.hotel.IsHotelierRequest\x1a\x19.hotel.IsHotelierResponse\x12>\n" +
-	"\vGetRoomInfo\x12\x16.hotel.RoomInfoRequest\x1a\x17.hotel.RoomInfoResponseBDZBgithub.com/Vlad-Ali/MTSGolangProjectBooking-protos/gen/hotel;hotelb\x06proto3"
+	"\vGetRoomInfo\x12\x16.hotel.RoomInfoRequest\x1a\x17.hotel.RoomInfoResponseBJZHgithub.com/Vlad-Ali/MTSGolangProjectBooking-protos/gen/proto/hotel;hotelb\x06proto3"
 
 var (
-	file_proto_hotel_proto_rawDescOnce sync.Once
-	file_proto_hotel_proto_rawDescData []byte
+	file_proto_hotel_hotel_proto_rawDescOnce sync.Once
+	file_proto_hotel_hotel_proto_rawDescData []byte
 )
 
-func file_proto_hotel_proto_rawDescGZIP() []byte {
-	file_proto_hotel_proto_rawDescOnce.Do(func() {
-		file_proto_hotel_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hotel_proto_rawDesc), len(file_proto_hotel_proto_rawDesc)))
+func file_proto_hotel_hotel_proto_rawDescGZIP() []byte {
+	file_proto_hotel_hotel_proto_rawDescOnce.Do(func() {
+		file_proto_hotel_hotel_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_hotel_hotel_proto_rawDesc), len(file_proto_hotel_hotel_proto_rawDesc)))
 	})
-	return file_proto_hotel_proto_rawDescData
+	return file_proto_hotel_hotel_proto_rawDescData
 }
 
-var file_proto_hotel_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_proto_hotel_proto_goTypes = []any{
+var file_proto_hotel_hotel_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_proto_hotel_hotel_proto_goTypes = []any{
 	(*RoomInfoRequest)(nil),    // 0: hotel.RoomInfoRequest
 	(*RoomInfoResponse)(nil),   // 1: hotel.RoomInfoResponse
 	(*IsHotelierRequest)(nil),  // 2: hotel.IsHotelierRequest
 	(*IsHotelierResponse)(nil), // 3: hotel.IsHotelierResponse
 }
-var file_proto_hotel_proto_depIdxs = []int32{
+var file_proto_hotel_hotel_proto_depIdxs = []int32{
 	2, // 0: hotel.Hotel.IsHotelier:input_type -> hotel.IsHotelierRequest
 	0, // 1: hotel.Hotel.GetRoomInfo:input_type -> hotel.RoomInfoRequest
 	3, // 2: hotel.Hotel.IsHotelier:output_type -> hotel.IsHotelierResponse
@@ -277,26 +277,26 @@ var file_proto_hotel_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_hotel_proto_init() }
-func file_proto_hotel_proto_init() {
-	if File_proto_hotel_proto != nil {
+func init() { file_proto_hotel_hotel_proto_init() }
+func file_proto_hotel_hotel_proto_init() {
+	if File_proto_hotel_hotel_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hotel_proto_rawDesc), len(file_proto_hotel_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_hotel_hotel_proto_rawDesc), len(file_proto_hotel_hotel_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_hotel_proto_goTypes,
-		DependencyIndexes: file_proto_hotel_proto_depIdxs,
-		MessageInfos:      file_proto_hotel_proto_msgTypes,
+		GoTypes:           file_proto_hotel_hotel_proto_goTypes,
+		DependencyIndexes: file_proto_hotel_hotel_proto_depIdxs,
+		MessageInfos:      file_proto_hotel_hotel_proto_msgTypes,
 	}.Build()
-	File_proto_hotel_proto = out.File
-	file_proto_hotel_proto_goTypes = nil
-	file_proto_hotel_proto_depIdxs = nil
+	File_proto_hotel_hotel_proto = out.File
+	file_proto_hotel_hotel_proto_goTypes = nil
+	file_proto_hotel_hotel_proto_depIdxs = nil
 }

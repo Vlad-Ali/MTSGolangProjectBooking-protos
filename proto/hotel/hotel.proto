@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package hotel;
 
-option go_package = "github.com/Vlad-Ali/MTSGolangProjectBooking-protos/gen/hotel;hotel";
+option go_package = "github.com/Vlad-Ali/MTSGolangProjectBooking-protos/gen/proto/hotel;hotel";
 
 service Hotel {
   rpc IsHotelier(IsHotelierRequest) returns (IsHotelierResponse);
