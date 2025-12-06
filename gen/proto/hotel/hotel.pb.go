@@ -23,8 +23,8 @@ const (
 
 type RoomInfoRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	HotelName     string                 `protobuf:"bytes,1,opt,name=hotelName,proto3" json:"hotelName,omitempty"`   // Name of the hotel
-	RoomNumber    string                 `protobuf:"bytes,2,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"` // Number of the room
+	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"`       // ID of the hotel
+	RoomNumber    int64                  `protobuf:"varint,2,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"` // Number of the room
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -59,18 +59,18 @@ func (*RoomInfoRequest) Descriptor() ([]byte, []int) {
 	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *RoomInfoRequest) GetHotelName() string {
+func (x *RoomInfoRequest) GetHotelID() int64 {
 	if x != nil {
-		return x.HotelName
+		return x.HotelID
 	}
-	return ""
+	return 0
 }
 
-func (x *RoomInfoRequest) GetRoomNumber() string {
+func (x *RoomInfoRequest) GetRoomNumber() int64 {
 	if x != nil {
 		return x.RoomNumber
 	}
-	return ""
+	return 0
 }
 
 type RoomInfoResponse struct {
@@ -127,8 +127,8 @@ func (x *RoomInfoResponse) GetCurrency() string {
 
 type IsHotelierRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	HotelName     string                 `protobuf:"bytes,1,opt,name=hotelName,proto3" json:"hotelName,omitempty"` // Name of the hotel
-	UserID        string                 `protobuf:"bytes,2,opt,name=userID,proto3" json:"userID,omitempty"`       // ID to check for hotelier
+	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"` // Name of the hotel
+	UserID        string                 `protobuf:"bytes,2,opt,name=userID,proto3" json:"userID,omitempty"`    // ID to check for hotelier
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -163,11 +163,11 @@ func (*IsHotelierRequest) Descriptor() ([]byte, []int) {
 	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *IsHotelierRequest) GetHotelName() string {
+func (x *IsHotelierRequest) GetHotelID() int64 {
 	if x != nil {
-		return x.HotelName
+		return x.HotelID
 	}
-	return ""
+	return 0
 }
 
 func (x *IsHotelierRequest) GetUserID() string {
@@ -225,17 +225,17 @@ var File_proto_hotel_hotel_proto protoreflect.FileDescriptor
 
 const file_proto_hotel_hotel_proto_rawDesc = "" +
 	"\n" +
-	"\x17proto/hotel/hotel.proto\x12\x05hotel\"O\n" +
-	"\x0fRoomInfoRequest\x12\x1c\n" +
-	"\thotelName\x18\x01 \x01(\tR\thotelName\x12\x1e\n" +
+	"\x17proto/hotel/hotel.proto\x12\x05hotel\"K\n" +
+	"\x0fRoomInfoRequest\x12\x18\n" +
+	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x1e\n" +
 	"\n" +
-	"roomNumber\x18\x02 \x01(\tR\n" +
+	"roomNumber\x18\x02 \x01(\x03R\n" +
 	"roomNumber\"F\n" +
 	"\x10RoomInfoResponse\x12\x16\n" +
 	"\x06amount\x18\x01 \x01(\x03R\x06amount\x12\x1a\n" +
-	"\bcurrency\x18\x02 \x01(\tR\bcurrency\"I\n" +
-	"\x11IsHotelierRequest\x12\x1c\n" +
-	"\thotelName\x18\x01 \x01(\tR\thotelName\x12\x16\n" +
+	"\bcurrency\x18\x02 \x01(\tR\bcurrency\"E\n" +
+	"\x11IsHotelierRequest\x12\x18\n" +
+	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x16\n" +
 	"\x06userID\x18\x02 \x01(\tR\x06userID\"4\n" +
 	"\x12IsHotelierResponse\x12\x1e\n" +
 	"\n" +

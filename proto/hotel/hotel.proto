@@ -10,8 +10,8 @@ service Hotel {
 }
 
 message RoomInfoRequest {
-  string hotelName = 1; // Name of the hotel
-  string roomNumber = 2; // Number of the room
+  int64 hotelID = 1; // ID of the hotel
+  int64 roomNumber = 2; // Number of the room
 }
 
 message RoomInfoResponse {
@@ -20,7 +20,7 @@ message RoomInfoResponse {
 }
 
 message IsHotelierRequest {
-  string hotelName = 1; // Name of the hotel
+  int64 hotelID = 1; // Name of the hotel
   string userID = 2; // ID to check for hotelier
 }
 
