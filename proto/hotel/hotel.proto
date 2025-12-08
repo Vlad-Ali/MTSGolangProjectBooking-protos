@@ -18,7 +18,7 @@ message RoomInfoResponse {
   int64 amount = 1;
   string currency = 2;
   string hotelName = 3;
-  string roomNumber = 4;
+  int64 roomNumber = 4;
 }
 
 message IsHotelierRequest {
