@@ -75,10 +75,10 @@ func (x *RoomInfoRequest) GetRoomID() int64 {
 
 type RoomInfoResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Amount        int64                  `protobuf:"varint,1,opt,name=amount,proto3" json:"amount,omitempty"`
+	Amount        int32                  `protobuf:"varint,1,opt,name=amount,proto3" json:"amount,omitempty"`
 	Currency      string                 `protobuf:"bytes,2,opt,name=currency,proto3" json:"currency,omitempty"`
 	HotelName     string                 `protobuf:"bytes,3,opt,name=hotelName,proto3" json:"hotelName,omitempty"`
-	RoomNumber    int64                  `protobuf:"varint,4,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"`
+	RoomNumber    int32                  `protobuf:"varint,4,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -113,7 +113,7 @@ func (*RoomInfoResponse) Descriptor() ([]byte, []int) {
 	return file_proto_hotel_hotel_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *RoomInfoResponse) GetAmount() int64 {
+func (x *RoomInfoResponse) GetAmount() int32 {
 	if x != nil {
 		return x.Amount
 	}
@@ -134,7 +134,7 @@ func (x *RoomInfoResponse) GetHotelName() string {
 	return ""
 }
 
-func (x *RoomInfoResponse) GetRoomNumber() int64 {
+func (x *RoomInfoResponse) GetRoomNumber() int32 {
 	if x != nil {
 		return x.RoomNumber
 	}
@@ -246,11 +246,11 @@ const file_proto_hotel_hotel_proto_rawDesc = "" +
 	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x16\n" +
 	"\x06roomID\x18\x02 \x01(\x03R\x06roomID\"\x84\x01\n" +
 	"\x10RoomInfoResponse\x12\x16\n" +
-	"\x06amount\x18\x01 \x01(\x03R\x06amount\x12\x1a\n" +
+	"\x06amount\x18\x01 \x01(\x05R\x06amount\x12\x1a\n" +
 	"\bcurrency\x18\x02 \x01(\tR\bcurrency\x12\x1c\n" +
 	"\thotelName\x18\x03 \x01(\tR\thotelName\x12\x1e\n" +
 	"\n" +
-	"roomNumber\x18\x04 \x01(\x03R\n" +
+	"roomNumber\x18\x04 \x01(\x05R\n" +
 	"roomNumber\"E\n" +
 	"\x11IsHotelierRequest\x12\x18\n" +
 	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x16\n" +

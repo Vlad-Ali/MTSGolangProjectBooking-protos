@@ -15,10 +15,10 @@ message RoomInfoRequest {
 }
 
 message RoomInfoResponse {
-  int64 amount = 1;
+  int32 amount = 1;
   string currency = 2;
   string hotelName = 3;
-  int64 roomNumber = 4;
+  int32 roomNumber = 4;
 }
 
 message IsHotelierRequest {
