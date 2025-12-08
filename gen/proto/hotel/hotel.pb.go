@@ -23,8 +23,8 @@ const (
 
 type RoomInfoRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"`       // ID of the hotel
-	RoomNumber    int64                  `protobuf:"varint,2,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"` // Number of the room
+	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"` // ID of the hotel
+	RoomID        int64                  `protobuf:"varint,2,opt,name=roomID,proto3" json:"roomID,omitempty"`   // ID of the room
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -66,9 +66,9 @@ func (x *RoomInfoRequest) GetHotelID() int64 {
 	return 0
 }
 
-func (x *RoomInfoRequest) GetRoomNumber() int64 {
+func (x *RoomInfoRequest) GetRoomID() int64 {
 	if x != nil {
-		return x.RoomNumber
+		return x.RoomID
 	}
 	return 0
 }
@@ -77,6 +77,8 @@ type RoomInfoResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Amount        int64                  `protobuf:"varint,1,opt,name=amount,proto3" json:"amount,omitempty"`
 	Currency      string                 `protobuf:"bytes,2,opt,name=currency,proto3" json:"currency,omitempty"`
+	HotelName     string                 `protobuf:"bytes,3,opt,name=hotelName,proto3" json:"hotelName,omitempty"`
+	RoomNumber    string                 `protobuf:"bytes,4,opt,name=roomNumber,proto3" json:"roomNumber,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -125,9 +127,23 @@ func (x *RoomInfoResponse) GetCurrency() string {
 	return ""
 }
 
+func (x *RoomInfoResponse) GetHotelName() string {
+	if x != nil {
+		return x.HotelName
+	}
+	return ""
+}
+
+func (x *RoomInfoResponse) GetRoomNumber() string {
+	if x != nil {
+		return x.RoomNumber
+	}
+	return ""
+}
+
 type IsHotelierRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"` // Name of the hotel
+	HotelID       int64                  `protobuf:"varint,1,opt,name=hotelID,proto3" json:"hotelID,omitempty"` // ID of the hotel
 	UserID        string                 `protobuf:"bytes,2,opt,name=userID,proto3" json:"userID,omitempty"`    // ID to check for hotelier
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -225,15 +241,17 @@ var File_proto_hotel_hotel_proto protoreflect.FileDescriptor
 
 const file_proto_hotel_hotel_proto_rawDesc = "" +
 	"\n" +
-	"\x17proto/hotel/hotel.proto\x12\x05hotel\"K\n" +
+	"\x17proto/hotel/hotel.proto\x12\x05hotel\"C\n" +
 	"\x0fRoomInfoRequest\x12\x18\n" +
-	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x1e\n" +
-	"\n" +
-	"roomNumber\x18\x02 \x01(\x03R\n" +
-	"roomNumber\"F\n" +
+	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x16\n" +
+	"\x06roomID\x18\x02 \x01(\x03R\x06roomID\"\x84\x01\n" +
 	"\x10RoomInfoResponse\x12\x16\n" +
 	"\x06amount\x18\x01 \x01(\x03R\x06amount\x12\x1a\n" +
-	"\bcurrency\x18\x02 \x01(\tR\bcurrency\"E\n" +
+	"\bcurrency\x18\x02 \x01(\tR\bcurrency\x12\x1c\n" +
+	"\thotelName\x18\x03 \x01(\tR\thotelName\x12\x1e\n" +
+	"\n" +
+	"roomNumber\x18\x04 \x01(\tR\n" +
+	"roomNumber\"E\n" +
 	"\x11IsHotelierRequest\x12\x18\n" +
 	"\ahotelID\x18\x01 \x01(\x03R\ahotelID\x12\x16\n" +
 	"\x06userID\x18\x02 \x01(\tR\x06userID\"4\n" +
